@@ -24,5 +24,16 @@ public class Loops {
 		
 	}
 	
+	// Create main method to execute the program
+	
+		public static void main(String[] args) {
+			
+			int numberOfTimes = 5;
+			
+			Loops result = new Loops();
+			
+			result.printWords(numberOfTimes);
+			
+		}
 
 }
