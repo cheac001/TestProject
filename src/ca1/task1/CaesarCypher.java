@@ -1,5 +1,9 @@
 package ca1.task1;
 
+import java.util.Arrays;
+
+	// Create a class "CaesarCypher"
+
 public class CaesarCypher {
 
 	// Create variables
@@ -60,6 +64,8 @@ public class CaesarCypher {
 		int asciiCode;
 		char character;
 		char[] afterDecode = new char[input.length];
+		
+		input = result;
 
 
 		// Use for loop to convert character of decoded array to ascii code and subtract offset number before convert back to character
@@ -67,7 +73,7 @@ public class CaesarCypher {
 
 		for (i = 0; i < input.length; i++) {
 
-			character = (result[i]);
+			character = (input[i]);
 			
 			asciiCode = character;
 			
@@ -82,21 +88,12 @@ public class CaesarCypher {
 
 	public static void main(String[] arg) {
 
-		char test = 'a';
-		char test1;
-
-		int number = test;
-		test1 = (char) (number + 1);
-
-		System.out.println(number);
-		System.out.println(test1);
-
 		char[] input = { 'a', 'b', 'c' };
 
 		CaesarCypher cc = new CaesarCypher(input, 2);
 
-		System.out.println(cc.encode());
-		System.out.println(cc.decode());
+		System.out.println(Arrays.toString(cc.encode()));
+		System.out.println(Arrays.toString(cc.decode()));
 
 	}
 
