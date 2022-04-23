@@ -28,9 +28,15 @@ public class Loops {
 	
 		public static void main(String[] args) {
 			
+			// Assign a integer value to numberOfTimes
+			
 			int numberOfTimes = 5;
 			
+			// Create object "result" using Loops class
+			
 			Loops result = new Loops();
+			
+			// Call method "printWords" using object
 			
 			result.printWords(numberOfTimes);
 			
