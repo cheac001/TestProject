@@ -36,7 +36,20 @@ class ArrayCountTest {
 
 	}
 	
-	
+	@Test
+	void testCount2() {
+
+		ArrayCount ac = new ArrayCount();
+
+		String[] array = { "car1", "bus1", "car1", "bus2", "car1" };
+
+		String target = "car1";
+
+		int expected = 3;
+
+		assertArrayEquals(expected, ac.count(array, target), "The encoding method does not work as expected.");
+
+	}
 
 
 	
