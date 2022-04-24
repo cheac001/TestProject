@@ -29,6 +29,8 @@ public class Car {
 	}
 	
 	
+	// Create method equals to compare model and color between objects
+	
 	public boolean equals (Car obj) {
 		
 		if (this.model == obj.model && this.color == obj.color) {
@@ -42,8 +44,16 @@ public class Car {
 		}
 	}
 	
+	// Create method hashCode to return a integer to be used for comparison between objects
 	
-
+	public int hashCode() {
+		
+		int totalHashCode = model.hashCode() + color.hashCode();
+		
+		return totalHashCode;
+		
+	}
+	
 	public static void main(String[] args) {
 
 		String make = "Honda";

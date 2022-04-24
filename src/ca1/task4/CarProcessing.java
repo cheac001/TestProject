@@ -25,6 +25,9 @@ public class CarProcessing {
 	}
 	
 	public Car[] removeDuplicates(Car[] inputArray) {
+		
+		
+		
 		return null;
 	}
 	
