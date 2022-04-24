@@ -8,26 +8,25 @@ class CaesarCypherTest {
 
 	@Test
 	void testEncode() {
-		
+
+		CaesarCypher cc = new CaesarCypher();
+
 		char[] input = {'a', 'b', 'c'};
 		char[] expected = {'c', 'd', 'e'};
-		
-		CaesarCypher cc = new CaesarCypher(input, 2);
-		
-		assertArrayEquals(expected, cc.encode(), "The encoding method does not work as expected.");
-	
+
+		assertArrayEquals(expected, cc.encode(input, 2), "The encoding method does not work as expected.");
+
 	}
 
 	@Test
 	void testDecode() {
-		
+
+		CaesarCypher cc = new CaesarCypher();
+
 		char[] input = {'c', 'd', 'e'};
 		char[] expected = {'a', 'b', 'c'};
-		
-		CaesarCypher cc = new CaesarCypher(input, 2);
-		
-		assertArrayEquals(expected, cc.decode(), "The encoding method does not work as expected.");
 
+		assertArrayEquals(expected, cc.decode(input, 2), "The encoding method does not work as expected.");
 
 	}
 

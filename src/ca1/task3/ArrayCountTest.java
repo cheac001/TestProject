@@ -20,7 +20,7 @@ class ArrayCountTest {
 		assertArrayEquals(expected, ac.count(array, target), "The encoding method does not work as expected.");
 
 	}
-	
+
 	@Test
 	void testCount1() {
 
@@ -35,7 +35,7 @@ class ArrayCountTest {
 		assertArrayEquals(expected, ac.count(array, target), "The encoding method does not work as expected.");
 
 	}
-	
+
 	@Test
 	void testCount2() {
 
@@ -51,12 +51,9 @@ class ArrayCountTest {
 
 	}
 
-
-	
-
 	private void assertArrayEquals(int expected, int count, String string) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
