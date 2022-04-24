@@ -1,6 +1,6 @@
 package ca1.task2;
 
-//Create a class "CaesarCypher"
+//Create a class "Loops"
 
 public class Loops {
 

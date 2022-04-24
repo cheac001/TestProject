@@ -1,7 +1,6 @@
 package ca1.task4;
 
-
-public class CarProcessing {
+public class CarProcessing1 {
 	
 	
 	Car[] result = {};
