@@ -20,13 +20,29 @@ public class Car {
 
 	}
 
-	// Create method toString to output variables as a class function
+	// Create method toString to return a string representation of a car
 
 	public String toString() {
 
 		return this.make + " , " + this.model + " , " + this.color;
 
 	}
+	
+	
+	public boolean equals (Car obj) {
+		
+		if (this.model == obj.model && this.color == obj.color) {
+			
+			return true;
+		}
+		
+		else {
+			
+			return false;
+		}
+	}
+	
+	
 
 	public static void main(String[] args) {
 
