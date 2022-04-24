@@ -1,6 +1,7 @@
 package ca1.task4;
 
 public class CarProcessing {
+	
 	public static void main(String[] args) {
 		
 		CarProcessing cp = new CarProcessing();
