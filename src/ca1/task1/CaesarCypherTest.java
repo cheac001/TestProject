@@ -2,10 +2,15 @@ package ca1.task1;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CaesarCypherTest {
-
+	
+	@BeforeEach
+	void setup() throws Exception {
+	}
+	
 	@Test
 	void testEncode() {
 
