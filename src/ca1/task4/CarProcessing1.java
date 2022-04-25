@@ -16,9 +16,9 @@ public class CarProcessing1 {
 		CarProcessing1 cp = new CarProcessing1();
 
 		Car[] cars = { new Car("Honda", "Civic", "Red"), new Car("Holden", "Civic", "Red"),
-				new Car("Jeep", "Wrangler", "Blue"), new Car("Jeep", "Wrangler", "Green"),
+				new Car("Jeep", "Wrangler", "Blue"), new Car("Jeep", "Wrangler", "Blue"),
 				new Car("Holden", "Falcon", "Yellow"), new Car("Honda", "Civic", "Blue"),
-				new Car("Honda", "Falcon", "Blue"), new Car("Honda", "Civic", "Purple") };
+				new Car("Honda", "Falcon", "Blue"), new Car("Honda", "Civic", "Blue") };
 
 		Car[] noDuplicates = cp.removeDuplicates(cars);
 
@@ -50,9 +50,8 @@ public class CarProcessing1 {
 				System.out.println(i);
 				System.out.println(j);
 				
-				
 
-				if (inputArray[i].equals(inputArray[j]) == true) {
+				if (inputArray[i].equals(inputArray[j]) == true && (inputArray[i].hashCode() != inputArray[j].hashCode()))  {
 					
 					match = match + 1;
 					
@@ -87,8 +86,9 @@ public class CarProcessing1 {
 		int k;
 
 		for (k = 0; k < outputArray.length-1; k++) {
+			
 
-			if (inputArray[inputArray.length -1] != outputArray[k]) {
+			if (inputArray[inputArray.length -1] != outputArray[k] && (inputArray[inputArray.length -1].hashCode() != outputArray[k].hashCode())) {
 				
 
 				outputArray[inputArray.length -1] = inputArray[inputArray.length-1];
@@ -112,6 +112,16 @@ public class CarProcessing1 {
 		return outputArray;
 		
 		////////////////////////////////
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 //		int i;
 //

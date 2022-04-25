@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class CaesarCypher {
 
-	// Create variable
+	// Create variable to hold result
 
 	char[] result = {};
 
@@ -14,7 +14,7 @@ public class CaesarCypher {
 
 	public char[] encode(char[] input, int offset) {
 
-		// Create local variables
+		// Create local variables "i", "asciiCode", "character", "afterEncode"
 
 		int i;
 		int asciiCode;
@@ -43,7 +43,7 @@ public class CaesarCypher {
 
 	public char[] decode(char[] input, int offset) {
 
-		// Create local variables
+		// Create local variables "i", "asciiCode", "character", "afterDecode"
 
 		int i;
 		int asciiCode;

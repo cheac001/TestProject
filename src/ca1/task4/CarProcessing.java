@@ -1,20 +1,14 @@
 package ca1.task4;
 
+//Create a class "CarProcessing"
 
 public class CarProcessing {
 	
-	
-	Car[] result = {};
-	
+	// Method main is given in template to help student output result
 
 	public static void main(String[] args) {
-		
-		Car car1 = new Car("Honda", "Civic", "Red");
-		
-		System.out.println(car1.hashCode());
-		
 
-		CarProcessing1 cp = new CarProcessing1();
+		CarProcessing cp = new CarProcessing();
 
 		Car[] cars = { new Car("Honda", "Civic", "Red"), new Car("Holden", "Civic", "Red"),
 				new Car("Jeep", "Wrangler", "Blue"), new Car("Jeep", "Wrangler", "Green"),
@@ -26,127 +20,87 @@ public class CarProcessing {
 		for (Car c : noDuplicates) {
 			System.out.println(c);
 		}
-		
-	}
 
+	}
 	
+	// Create method removeDuplicates to remove duplicated items in an array
+
 	public Car[] removeDuplicates(Car[] inputArray) {
 		
+		// Create local variables "i"  for loop index and "outputArray" to hold unique items in array
 
 		int i;
 
 		Car[] outputArray = new Car[inputArray.length];
 		
+		
+		// Use for loop to perform matching with every items in array
 
 		for (i = 0; i < inputArray.length - 1; i++) {
-
-			int j=0;
 			
+			
+			// Create local variables "j" for another loop and "match" to hold number of match
+
+			int j = 0;
+
 			int match = 0;
 			
-			
+			// Use another for loop to match one item to all other items in array
 
-			for (j = i+1; j < inputArray.length; j++) {
-				
-				System.out.println(i);
-				System.out.println(j);
+			for (j = i + 1; j < inputArray.length; j++) {
 				
 				
+				// Use if statement to apply equals method and count number of matches
 
 				if (inputArray[i].equals(inputArray[j]) == true) {
-					
-					match = match + 1;
-					
-					System.out.println("Item " + inputArray[i] + " has match with " + inputArray[j]);
 
+					match = match + 1;
 				}
 				
 				else {
-					
-					System.out.println("Item " + inputArray[i] + " has not match with " + inputArray[j]);
+					;
 				}
 
 			}
 			
+			// Use if statement to all unique items into output array when match is equal to zero
+
 			if (match == 0) {
 
 				outputArray[i] = inputArray[i];
-				
-				System.out.println("Item " + inputArray[i] + " is unique so added to output array.");
-				
 			}
 			
 			else {
-				
-				System.out.println("Item " + inputArray[i] + " is not unique so do not add to output array.");
+				;
 			}
-			
 		}
 		
-
+	
+		// Create local variables "k" for another loop
 
 		int k;
+		
+		
+		// Use for loop to determine whether last item in input array is already included in output array
 
-		for (k = 0; k < outputArray.length-1; k++) {
+		for (k = 0; k < outputArray.length - 1; k++) {
+			
+			// Use if statement to all last item to output array if it is unique
+			
+			if (inputArray[inputArray.length - 1] != outputArray[k]) {
 
-			if (inputArray[inputArray.length -1] != outputArray[k]) {
-				
-
-				outputArray[inputArray.length -1] = inputArray[inputArray.length-1];
-				
-				
-				System.out.println("Item " + inputArray[inputArray.length -1] + " has not match with " + outputArray[k] + " is unique add to output array.");
+				outputArray[inputArray.length - 1] = inputArray[inputArray.length - 1];
 
 			}
-			
 			
 			else {
-				
-				System.out.println("Item " + inputArray[inputArray.length -1] + " has matched with " + outputArray[k] + " so not unique");
-
+				;
 			}
-			
 		}
 		
-		result = outputArray;
-		
-		return outputArray;
-		
-		////////////////////////////////
-		
-//		int i;
-//
-//		Car[] outputArray = new Car[inputArray.length];
-//		
-//
-//		for (i = 0; i < inputArray.length - 1; i++) {
-//
-//			int j;
-//
-//			for (j = 1; j < inputArray.length; j++) {
-//
-//				if (inputArray[i].hashCode() != inputArray[j].hashCode()) {
-//
-//					outputArray[i] = inputArray[i];
-//
-//				}
-//			}
-//		}
-//
-//		int k;
-//
-//		for (k = 0; k < outputArray.length-1; k++) {
-//
-//			if (inputArray[inputArray.length - 1] != outputArray[k]) {
-//
-//				outputArray[inputArray.length -1] = inputArray[inputArray.length-1];
-//
-//			}
-//		}
-//		
+		// return result as outputArray
 
-		////////////////////////////////////////
-		
+		return outputArray;
 
 	}
 }
