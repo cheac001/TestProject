@@ -95,7 +95,7 @@ public class CaesarCypher {
 		return afterDecode;
 	}
 
-	// Use main method to perform quick test during coding
+	//  Create main method to execute the program
 
 	public static void main(String[] arg) {
 

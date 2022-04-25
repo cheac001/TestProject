@@ -4,31 +4,27 @@ package ca1.task3;
 
 public class ArrayCount {
 
-	// Create method to count targeted string in an array
+	// Create a method to count targeted string in an array
 
 	public int count(String[] array, String target) {
 
-		// Create local variables "count" and "i"
+		// Create local variables "match" to hold the number of matches and "i" for index in loop
 
 		int match = 0;
-
 		int i = 0;
 
 		// Use for loop to match targeted string with all items in array and record any
-		// match with count
+		// match with match by adding one
 
 		for (i = 0; i < array.length; i++) {
 
 			if (array[i] == target) {
 
 				match = match + 1;
-
 			}
-
 		}
 
-		// Use if statement to return the number when no match is found in array with
-		// target
+		// Use if statement to return the number when no match is found in array with target
 
 		if (match == 0) {
 
@@ -48,7 +44,7 @@ public class ArrayCount {
 
 		}
 
-		// Use else if statement to return the number when more than one match in array
+		// Use else statement to return the number when more than one match in array
 		// with target
 
 		else {

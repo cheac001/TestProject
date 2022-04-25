@@ -8,21 +8,18 @@ public class Loops {
 
 	public void printWords(int numberOfTimes) {
 
-		// Create local variables "input" and "i"
+		// Create variables "input" hold a string and "i" for index in loop
 
 		String input = "words";
-
 		int i;
 
-		// Use for loop to repeatedly print "words" according to parameter
-		// "numberOfTimes"
+		// Use for loop to repeatedly print "words" according to parameter numberOfTimes
 
 		for (i = 0; i < numberOfTimes; i++) {
 
 			System.out.println(input);
 
 		}
-
 	}
 
 	// Create main method to execute the program
@@ -37,7 +34,7 @@ public class Loops {
 
 		Loops result = new Loops();
 
-		// Call method "printWords" using object
+		// Call method "printWords" using object result
 
 		result.printWords(numberOfTimes);
 

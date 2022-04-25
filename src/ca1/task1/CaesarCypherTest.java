@@ -34,5 +34,5 @@ class CaesarCypherTest {
 		assertArrayEquals(expected, cc.decode(input, 2), "The encoding method does not work as expected.");
 
 	}
-
+	
 }

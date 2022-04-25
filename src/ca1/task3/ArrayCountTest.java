@@ -5,9 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class ArrayCountTest {
+	
+	// Perform first test with target does not exist in the array
 
 	@Test
-	void testCount0() {
+	void testCount1() {
 
 		ArrayCount ac = new ArrayCount();
 
@@ -20,9 +22,11 @@ class ArrayCountTest {
 		assertArrayEquals(expected, ac.count(array, target), "The encoding method does not work as expected.");
 
 	}
+	
+	// Perform second test with target appears only once in the array
 
 	@Test
-	void testCount1() {
+	void testCount2() {
 
 		ArrayCount ac = new ArrayCount();
 
@@ -36,8 +40,10 @@ class ArrayCountTest {
 
 	}
 
+	// Perform third test with target appears multiple times in the array
+	
 	@Test
-	void testCount2() {
+	void testCount3() {
 
 		ArrayCount ac = new ArrayCount();
 
