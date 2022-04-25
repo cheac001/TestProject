@@ -11,9 +11,9 @@ public class CarProcessing {
 		CarProcessing cp = new CarProcessing();
 
 		Car[] cars = { new Car("Honda", "Civic", "Red"), new Car("Holden", "Civic", "Red"),
-				new Car("Jeep", "Wrangler", "Blue"), new Car("Jeep", "Wrangler", "Green"),
+				new Car("Jeep", "Wrangler", "Blue"), new Car("Jeep", "Wrangler", "Blue"),
 				new Car("Holden", "Falcon", "Yellow"), new Car("Honda", "Civic", "Blue"),
-				new Car("Honda", "Falcon", "Blue"), new Car("Honda", "Civic", "Purple") };
+				new Car("Honda", "Falcon", "Blue"), new Car("Honda", "Civic", "Blue") };
 
 		Car[] noDuplicates = cp.removeDuplicates(cars);
 
